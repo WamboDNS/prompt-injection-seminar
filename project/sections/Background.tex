@@ -1,0 +1,50 @@
+\section{\textit{Background}}
+In this section, we introduce the necessary background knowledge to understand the context of this paper. 
+The explanation will be on a high level as going into detail for each topic would go beyond the scope of this work. 
+For further information, please refer to the cited sources.
+
+First, we introduce LLMs.
+Then, we explain the general concept of prompt injection attacks against LLMs.
+Finally, we discuss the usage of a threat model.
+\subsection{\textit{Large Language Models}}
+Large Language Models are a type of neural network.
+More specifically, they are Natural Language Processing models based on the Transformer architecture~\cite{vaswani2023attention, floridi2020gpt, thoppilan2022lamda}.
+This architecture is particularly effective when processing sequential data, like (long) texts. 
+Therefore, they can be trained to understand and predict human language patterns.
+LLMs fulfill this task. Equipped with billions of parameters, they train on large corpora of (text) data.
+The training of LLMs can be split up into two distinct phases.
+During the first phase, the pre-training, the model is trained to solve general tasks, like predicting the next word or context of a sentence~\cite{radford2018improving}.
+After that, during the fine-tuning phase, the LLM is fine-tuned to solve more specific tasks. 
+Additionally, in the second step, the LLM can be configured and aligned with custom policies. 
+This alignment is especially important, as it prevents the LLM from answering malicious prompts aiming to exploit it. 
+For benign users, the alignment forces the LLM to stay as politically and ethically correct as possible.
+Once fully trained, the LLM receives an input, called \textit{prompt}, and outputs a \textit{response}~\cite{floridi2020gpt, thoppilan2022lamda}.
+Their vast size allows them to generate responses that are almost indistinguishable from human-written text.
+In combination with their ability to generate texts of different styles, LLMs are used in a variety of applications, such as text generation, translation, summarizing, and question answering~\cite{floridi2020gpt, thoppilan2022lamda}.
+However, this is to be enjoyed with care as the power of a LLM is not only attractive to normal users. 
+Over time, the LLM is exposed to many risks. It can collect user-specific information that is very valuable to other malicious users or be exposed to external injected bias.
+These two risks are only a few of many a LLM faces, which makes it even more important to secure it against evil intent.
+
+Additionally, LLMs are not only useful for direct human interaction.
+Recent development shows that they can also be integrated into applications to offer interactive functionalities, oftentimes by calling external Application Programming Interfaces (APIs).
+However, this does not come without security risks~\cite{10.1145/3605764.3623985, liu2023demystifying, pedro2023prompt}. 
+Especially external connections and the rapidly growing, extensive, use of AI functionality pose a security risk to the application if not properly secured and monitored.
+\subsection{\textit{Prompt Injection}}
+Even the most powerful LLM renders useless without a prompt.
+Most of the time, only the prompt enables the user to interact with the LLM and is the only way to control the output of the LLM.
+Consequently, the prompt is a convenient way for a malicious user to take over or manipulate that response~\cite{perez2022ignore}.
+
+We define prompt injection attacks as the malicious input of prompts to a LLM to manipulate the LLM itself or its response. 
+A successful prompt injection can exploit the LLM without changing its state or performing prohibited actions.
+If used properly, prompt injection attacks can therefore circumvent content restrictions, or even security filters, of the LLM.
+This can not only lead to the leakage of sensitive information but also to the execution of malicious code or other unintended, potentially harmful, behavior.
+Somewhat counterintuitively, input prompts are not always directly user-given, but can also be hidden in input data or even in the data retrieved by the LLM~\cite{10.1145/3605764.3623985}.
+In the latter case, there is no clear line between data and prompts from the model side, which confuses the LLM and leads to unexpected behaviour~\cite{10.1145/3605764.3623985}.
+\subsection{\textit{Threat Model}}
+In cyber security, the process of threat modeling is crucial for the analysis of the security of systems.
+A threat model helps to analyze potential attacks and understand the attacker's goals~\cite{XIONG201953}.
+Typically, these threat models are used to outline the possibilities of an adversary to get an overview of present risks.
+
+Prompt injection attacks are diverse and work very differently, as we show in our taxonomy. 
+One single threat model cannot outline the different scenarios of attacks appropriately.
+Therefore, we decided not to introduce a fixed threat model in this work and instead forward it to the original authors of the mentioned attacks, as most of them propose threat models themselves.

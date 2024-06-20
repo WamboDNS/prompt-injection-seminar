@@ -1,0 +1,26 @@
+\section{\textit{Introduction}}
+Nowadays, Large Language Models (LLMs) are omnipresent. Used by students, in research,  or assisting everyday tasks, seemingly everyone uses them. 
+This recently gained popularity makes them particularly attractive for adversaries. 
+And since LLMs come in various forms, it seems like there is infinite room for the creativity of adversaries to attack them. 
+One of the most versatile types of attacks are prompt injection attacks~\cite{10.1145/3605764.3623985}, in which the adversary communicates with the LLM via prompts and instructions.
+
+Since this recent uprise of LLMs is rather current and the models evolve at rapid speeds, developing LLMs to be more robust against prompt injection attacks is now more important than ever. However, there is no taxonomy yet to categorize these attacks. 
+Therefore, it is especially hard to defend against them without tackling every single attack pattern one by one.
+Finding similarities and differences and forming groups of attacks allows developers to implement defense mechanisms more easily. 
+
+We introduce a novel taxonomy, allowing a fine grained categorization of prompt injection attacks against LLMs. 
+To achieve this, we split attacks along three axes: The attack vector, the mode of operation and the goal of the attack.
+These three axes then are split into different (not necessarily disjoint) subcategories, resulting in a wide coverage of the field. 
+Our main contributions are the following:
+
+\begin{itemize}
+    \item R1: We analyze the current state of the field and find similarities and differences among prompt injection attack patterns.
+    \item R2: We use gained knowledge to present a taxonomy to categorize prompt injection attacks and introduce defense mechanisms.
+    \item R3: We discuss the taxonomy and defense mechanisms for prompt injections.
+\end{itemize}
+
+We start by introducing important background knowledge of the field needed to understand our taxonomy and the used attacks. 
+After that, we introduce our taxonomy and present the different categories we observed during our research.
+Next, we briefly talk about the defense against prompt injection attacks and how to handle them properly.
+Then, we discuss our taxonomy, the defense and give an outlook to what can further be researched.
+Finally, we conclude the contributions of this paper.

@@ -1,11 +1,31 @@
-# Prompt Injection Attacks against LLMs
+\documentclass[a4paper,sigconf]{acmart}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{tikz}
+\usepackage{tcolorbox}
+\title{Prompt Injection Attacks against LLMs}
+\setcopyright{rightsretained}
+\copyrightyear{2024}
+\acmYear{2024}
+\acmDOI{}
+\acmConference[HoT-MLSEC Conference 2024]{HoT-MLSEC Conference 2024}{February 16, 2024}{KIT, Karlsruhe, Germany}
+\acmBooktitle{Proceedings of HoT-MLSEC Conference 2024,
+February 16, 2024, KIT, Karlsruhe, Germany}
+\acmISBN{}
+\settopmatter{printacmref=false}
+\settopmatter{printccs=false}
+\keywords{Prompt Injection, LLM, Cybersecurity, SoK} % <--- Set keywords that match your topic!
+\geometry{twoside=true, head=13pt, paperwidth=210mm, paperheight=297mm, includeheadfoot, columnsep=2pc, top=57pt, bottom=73pt, inner=54pt, outer=54pt,  marginparwidth=2pc,heightrounded}
+\begin{document}
+\author{Denis Wambold}
+\email{denis.wambold@student.kit.edu}
+\affiliation{%
+  \institution{Karlsruhe Institute of Technology}
+  \city{Karlsruhe}
+  \country{Germany}
+}
 
-I wrote this SOK seminar paper as a part of the '[Security of Machine Learning](https://intellisec.de/teaching/2023-ws/hot-secml/)'-seminar @KIT. In this paper, I compare several attack types against LLMs and introduce a novel taxonomy to allow the categorization of attacks against LLMs along three dimensions: 
-1) Attack Vector
-2) Mode of Operation
-3) Goal of the Attack
-
-## Abstract
+\begin{abstract}
 Large Language Models (LLMs) have gained huge popularity in recent years. 
 Being widely available to the public, these Natural Language Processing models can answer human-written input prompts with output prompts hard to distinguish from human-written answers.
 Since so many people use LLMs daily, they can carry sensitive user data or be used to trick benign users.
@@ -18,5 +38,14 @@ To do so, we analyze well-known prompt injection attacks against LLMs and split 
 Then, we split each of those parts into multiple subcategories to allow a fine-grained categorization of attacks. 
 Using our taxonomy, we achieve a wide coverage of (possible) prompt injection attacks against LLMs, allowing categorization and comparison.
 Furthermore, we glance at possible defense mechanisms and discuss our taxonomy to ensure the security of LLMs against prompt injection attacks.
-
-In case you want to talk about the paper, feel free to reach out to me!
+\end{abstract}
+\maketitle
+\input{sections/Introduction.tex}
+\input{sections/Background.tex}
+\input{sections/Taxonomy.tex}
+\input{sections/Defense.tex}
+\input{sections/Discussion.tex}
+\input{sections/Conclusion.tex}
+\bibliographystyle{acm}
+\bibliography{seminar.bib}
+\end{document}

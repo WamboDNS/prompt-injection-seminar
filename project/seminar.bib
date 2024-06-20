@@ -1,0 +1,518 @@
+@inproceedings{10.1145/3605764.3623985,
+author = {Abdelnabi, Sahar and Greshake, Kai and Mishra, Shailesh and Endres, Christoph and Holz, Thorsten and Fritz, Mario},
+title = {Not What You've Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection},
+year = {2023},
+isbn = {9798400702600},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3605764.3623985},
+doi = {10.1145/3605764.3623985},
+abstract = {Large Language Models (LLMs) are increasingly being integrated into applications, with versatile functionalities that can be easily modulated via natural language prompts. So far, it was assumed that the user is directly prompting the LLM. But, what if it is not the user prompting? We show that LLM-Integrated Applications blur the line between data and instructions and reveal several new attack vectors, using Indirect Prompt Injection, that enable adversaries to remotely (i.e., without a direct interface) exploit LLM-integrated applications by strategically injecting prompts into data likely to be retrieved at inference time. We derive a comprehensive taxonomy from a computer security perspective to broadly investigate impacts and vulnerabilities, including data theft, worming, information ecosystem contamination, and other novel security risks. We then demonstrate the practical viability of our attacks against both real-world systems, such as Bing Chat and code-completion engines, and GPT-4 synthetic applications. We show how processing retrieved prompts can act as arbitrary code execution, manipulate the application's functionality, and control how and if other APIs are called. Despite the increasing reliance on LLMs, effective mitigations of these emerging threats are lacking. By raising awareness of these vulnerabilities, we aim to promote the safe and responsible deployment of these powerful models and the development of robust defenses that protect users from potential attacks.},
+booktitle = {Proceedings of the 16th ACM Workshop on Artificial Intelligence and Security},
+pages = {79–90},
+numpages = {12},
+keywords = {large language models, indirect prompt injection},
+location = {, Copenhagen, Denmark, },
+series = {AISec '23}
+}
+@inproceedings{
+perez2022ignore,
+title={Ignore Previous Prompt: Attack Techniques For Language Models},
+author={F{\'a}bio Perez and Ian Ribeiro},
+booktitle={NeurIPS ML Safety Workshop},
+year={2022},
+url={https://openreview.net/forum?id=qiaRo_7Zmug}
+}
+@misc{liu2023prompt,
+      title={Prompt Injection attack against LLM-integrated Applications}, 
+      author={Yi Liu and Gelei Deng and Yuekang Li and Kailong Wang and Tianwei Zhang and Yepang Liu and Haoyu Wang and Yan Zheng and Yang Liu},
+      year={2023},
+      eprint={2306.05499},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
+@misc{openai2023gpt4,
+      title={GPT-4 Technical Report}, 
+      author={OpenAI},
+      year={2023},
+      eprint={2303.08774},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+@misc{pedro2023prompt,
+      title={From Prompt Injections to SQL Injection Attacks: How Protected is Your LLM-Integrated Web Application?}, 
+      author={Rodrigo Pedro and Daniel Castro and Paulo Carreira and Nuno Santos},
+      year={2023},
+      eprint={2308.01990},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
+@misc{wei2023jailbroken,
+      title={Jailbroken: How Does LLM Safety Training Fail?}, 
+      author={Alexander Wei and Nika Haghtalab and Jacob Steinhardt},
+      year={2023},
+      eprint={2307.02483},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@misc{yu2023assessing,
+      title={Assessing Prompt Injection Risks in 200+ Custom GPTs}, 
+      author={Jiahao Yu and Yuhang Wu and Dong Shu and Mingyu Jin and Xinyu Xing},
+      year={2023},
+      eprint={2311.11538},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
+
+@misc{liu2023demystifying,
+      title={Demystifying RCE Vulnerabilities in LLM-Integrated Apps}, 
+      author={Tong Liu and Zizhuang Deng and Guozhu Meng and Yuekang Li and Kai Chen},
+      year={2023},
+      eprint={2309.02926},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
+@misc{vaswani2023attention,
+      title={Attention Is All You Need}, 
+      author={Ashish Vaswani and Noam Shazeer and Niki Parmar and Jakob Uszkoreit and Llion Jones and Aidan N. Gomez and Lukasz Kaiser and Illia Polosukhin},
+      year={2023},
+      eprint={1706.03762},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@article{floridi2020gpt,
+  title={GPT-3: Its nature, scope, limits, and consequences},
+  author={Floridi, Luciano and Chiriatti, Massimo},
+  journal={Minds and Machines},
+  volume={30},
+  pages={681--694},
+  year={2020},
+  publisher={Springer}
+}
+@misc{thoppilan2022lamda,
+      title={LaMDA: Language Models for Dialog Applications}, 
+      author={Romal Thoppilan and Daniel De Freitas and Jamie Hall and Noam Shazeer and Apoorv Kulshreshtha and Heng-Tze Cheng and Alicia Jin and Taylor Bos and Leslie Baker and Yu Du and YaGuang Li and Hongrae Lee and Huaixiu Steven Zheng and Amin Ghafouri and Marcelo Menegali and Yanping Huang and Maxim Krikun and Dmitry Lepikhin and James Qin and Dehao Chen and Yuanzhong Xu and Zhifeng Chen and Adam Roberts and Maarten Bosma and Vincent Zhao and Yanqi Zhou and Chung-Ching Chang and Igor Krivokon and Will Rusch and Marc Pickett and Pranesh Srinivasan and Laichee Man and Kathleen Meier-Hellstern and Meredith Ringel Morris and Tulsee Doshi and Renelito Delos Santos and Toju Duke and Johnny Soraker and Ben Zevenbergen and Vinodkumar Prabhakaran and Mark Diaz and Ben Hutchinson and Kristen Olson and Alejandra Molina and Erin Hoffman-John and Josh Lee and Lora Aroyo and Ravi Rajakumar and Alena Butryna and Matthew Lamm and Viktoriya Kuzmina and Joe Fenton and Aaron Cohen and Rachel Bernstein and Ray Kurzweil and Blaise Aguera-Arcas and Claire Cui and Marian Croak and Ed Chi and Quoc Le},
+      year={2022},
+      eprint={2201.08239},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@misc{chao2023jailbreaking,
+      title={Jailbreaking Black Box Large Language Models in Twenty Queries}, 
+      author={Patrick Chao and Alexander Robey and Edgar Dobriban and Hamed Hassani and George J. Pappas and Eric Wong},
+      year={2023},
+      eprint={2310.08419},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+
+@misc{yan2023backdooring,
+      title={Backdooring Instruction-Tuned Large Language Models with Virtual Prompt Injection}, 
+      author={Jun Yan and Vikas Yadav and Shiyang Li and Lichang Chen and Zheng Tang and Hai Wang and Vijay Srinivasan and Xiang Ren and Hongxia Jin},
+      year={2023},
+      eprint={2307.16888},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@misc{zhang2023prompts,
+      title={Prompts Should not be Seen as Secrets: Systematically Measuring Prompt Extraction Attack Success}, 
+      author={Yiming Zhang and Daphne Ippolito},
+      year={2023},
+      eprint={2307.06865},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+@inproceedings{zhang-etal-2023-trojansql,
+    title = "{T}rojan{SQL}: {SQL} Injection against Natural Language Interface to Database",
+    author = "Zhang, Jinchuan  and
+      Zhou, Yan  and
+      Hui, Binyuan  and
+      Liu, Yaxin  and
+      Li, Ziming  and
+      Hu, Songlin",
+    editor = "Bouamor, Houda  and
+      Pino, Juan  and
+      Bali, Kalika",
+    booktitle = "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+    month = dec,
+    year = "2023",
+    address = "Singapore",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.emnlp-main.264",
+    doi = "10.18653/v1/2023.emnlp-main.264",
+    pages = "4344--4359",
+    abstract = "The technology of text-to-SQL has significantly enhanced the efficiency of accessing and manipulating databases. However, limited research has been conducted to study its vulnerabilities emerging from malicious user interaction. By proposing TrojanSQL, a backdoor-based SQL injection framework for text-to-SQL systems, we show how state-of-the-art text-to-SQL parsers can be easily misled to produce harmful SQL statements that can invalidate user queries or compromise sensitive information about the database. The study explores two specific injection attacks, namely $\textit{boolean-based injection}$ and $\textit{union-based injection}$, which use different types of triggers to achieve distinct goals in compromising the parser. Experimental results demonstrate that both medium-sized models based on fine-tuning and LLM-based parsers using prompting techniques are vulnerable to this type of attack, with attack success rates as high as 99{\%} and 89{\%}, respectively. We hope that this study will raise more concerns about the potential security risks of building natural language interfaces to databases.",
+}
+@misc{yao2023poisonprompt,
+      title={PoisonPrompt: Backdoor Attack on Prompt-based Large Language Models}, 
+      author={Hongwei Yao and Jian Lou and Zhan Qin},
+      year={2023},
+      eprint={2310.12439},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+@misc{iqbal2023llm,
+      title={LLM Platform Security: Applying a Systematic Evaluation Framework to OpenAI's ChatGPT Plugins}, 
+      author={Umar Iqbal and Tadayoshi Kohno and Franziska Roesner},
+      year={2023},
+      eprint={2309.10254},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
+@misc{hazell2023spear,
+      title={Spear Phishing With Large Language Models}, 
+      author={Julian Hazell},
+      year={2023},
+      eprint={2305.06972},
+      archivePrefix={arXiv},
+      primaryClass={cs.CY}
+}
+
+@misc{gallegos2023bias,
+      title={Bias and Fairness in Large Language Models: A Survey}, 
+      author={Isabel O. Gallegos and Ryan A. Rossi and Joe Barrow and Md Mehrab Tanjim and Sungchul Kim and Franck Dernoncourt and Tong Yu and Ruiyi Zhang and Nesreen K. Ahmed},
+      year={2023},
+      eprint={2309.00770},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@inproceedings{10.1145/3133956.3134072,
+author = {Li, Frank and Paxson, Vern},
+title = {A Large-Scale Empirical Study of Security Patches},
+year = {2017},
+isbn = {9781450349468},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3133956.3134072},
+doi = {10.1145/3133956.3134072},
+abstract = {Given how the "patching treadmill" plays a central role for enabling sites to counter emergent security concerns, it behooves the security community to understand the patch development process and characteristics of the resulting fixes. Illumination of the nature of security patch development can inform us of shortcomings in existing remediation processes and provide insights for improving current practices. In this work we conduct a large-scale empirical study of security patches, investigating more than 4,000 bug fixes for over 3,000 vulnerabilities that affected a diverse set of 682 open-source software projects. For our analysis we draw upon the National Vulnerability Database, information scraped from relevant external references, affected software repositories, and their associated security fixes. Leveraging this diverse set of information, we conduct an analysis of various aspects of the patch development life cycle, including investigation into the duration of impact a vulnerability has on a code base, the timeliness of patch development, and the degree to which developers produce safe and reliable fixes. We then characterize the nature of security fixes in comparison to other non-security bug fixes, exploring the complexity of different types of patches and their impact on code bases.Among our findings we identify that: security patches have a lower footprint in code bases than non-security bug patches; a third of all security issues were introduced more than 3 years prior to remediation; attackers who monitor open-source repositories can often get a jump of weeks to months on targeting not-yet-patched systems prior to any public disclosure and patch distribution; nearly 5\% of security fixes negatively impacted the associated software; and 7\% failed to completely remedy the security hole they targeted.},
+booktitle = {Proceedings of the 2017 ACM SIGSAC Conference on Computer and Communications Security},
+pages = {2201–2215},
+numpages = {15},
+keywords = {vulnerabilities, empirical study, security patches, patch complexity},
+location = {Dallas, Texas, USA},
+series = {CCS '17}
+}
+
+@inproceedings{10.1145/2351676.2351733,
+author = {Shar, Lwin Khin and Tan, Hee Beng Kuan},
+title = {Predicting Common Web Application Vulnerabilities from Input Validation and Sanitization Code Patterns},
+year = {2012},
+isbn = {9781450312042},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2351676.2351733},
+doi = {10.1145/2351676.2351733},
+abstract = {Software defect prediction studies have shown that defect predictors built from static code attributes are useful and effective. On the other hand, to mitigate the threats posed by common web application vulnerabilities, many vulnerability detection approaches have been proposed. However, finding alternative solutions to address these risks remains an important research problem. As web applications generally adopt input validation and sanitization routines to prevent web security risks, in this paper, we propose a set of static code attributes that represent the characteristics of these routines for predicting the two most common web application vulnerabilities—SQL injection and cross site scripting. In our experiments, vulnerability predictors built from the proposed attributes detected more than 80\% of the vulnerabilities in the test subjects at low false alarm rates.},
+booktitle = {Proceedings of the 27th IEEE/ACM International Conference on Automated Software Engineering},
+pages = {310–313},
+numpages = {4},
+keywords = {Defect prediction, static code attributes, empirical study, web application vulnerabilities, input validation and sanitization},
+location = {Essen, Germany},
+series = {ASE '12}
+}
+
+@misc{zafar2023building,
+      title={Building Trust in Conversational AI: A Comprehensive Review and Solution Architecture for Explainable, Privacy-Aware Systems using LLMs and Knowledge Graph}, 
+      author={Ahtsham Zafar and Venkatesh Balavadhani Parthasarathy and Chan Le Van and Saad Shahid and Aafaq Iqbal khan and Arsalan Shahid},
+      year={2023},
+      eprint={2308.13534},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+
+@incollection{SANDHU1998237,
+title = {Role-based Access Control11Portions of this chapter have been published earlier in Sandhu et al. (1996), Sandhu (1996), Sandhu and Bhamidipati (1997), Sandhu et al. (1997) and Sandhu and Feinstein (1994).},
+editor = {Marvin V. Zelkowitz},
+series = {Advances in Computers},
+publisher = {Elsevier},
+volume = {46},
+pages = {237-286},
+year = {1998},
+issn = {0065-2458},
+doi = {https://doi.org/10.1016/S0065-2458(08)60206-5},
+url = {https://www.sciencedirect.com/science/article/pii/S0065245808602065},
+author = {Ravi S. Sandhu},
+abstract = {Abstracts
+The basic concept of role-based access control (RBAC) is that permissions are associated with roles, and users are made members of appropriate roles, thereby acquiring the roles' permissions. This idea has been around since the advent of multi-user computing. Until recently, however, RBAC has received little attention from the research community. This chapter describes the motivations, results, and open issues in recent MAC research. The chapter focuses on four areas. First, RBAC is a multidimensional concept that can range from very simple at one extreme to quite complex and sophisticated at the other. This presents problems in coming up with a definitive model of RBAC. We see how this impasse is resolved by having a family of models which can accommodate all these variations. Second, we discuss how RBAC can be used to manage itself. Recent models developed for this purpose are presented. Third, the flexibility of RBAC can be demonstrated in many ways. Here we show how RBAC can be configured to enforce different variations of classical lattice-based mandatory access controls. Fourth, we describe a conceptual three-tier architecture for specification and enforcement of RBAC. The chapter concludes with a discussion of open issues in RBAC.}
+}
+
+@article{10.1145/1541880.1541882,
+author = {Chandola, Varun and Banerjee, Arindam and Kumar, Vipin},
+title = {Anomaly Detection: A Survey},
+year = {2009},
+issue_date = {July 2009},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {41},
+number = {3},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/1541880.1541882},
+doi = {10.1145/1541880.1541882},
+abstract = {Anomaly detection is an important problem that has been researched within diverse research areas and application domains. Many anomaly detection techniques have been specifically developed for certain application domains, while others are more generic. This survey tries to provide a structured and comprehensive overview of the research on anomaly detection. We have grouped existing techniques into different categories based on the underlying approach adopted by each technique. For each category we have identified key assumptions, which are used by the techniques to differentiate between normal and anomalous behavior. When applying a given technique to a particular domain, these assumptions can be used as guidelines to assess the effectiveness of the technique in that domain. For each category, we provide a basic anomaly detection technique, and then show how the different existing techniques in that category are variants of the basic technique. This template provides an easier and more succinct understanding of the techniques belonging to each category. Further, for each category, we identify the advantages and disadvantages of the techniques in that category. We also provide a discussion on the computational complexity of the techniques since it is an important issue in real application domains. We hope that this survey will provide a better understanding of the different directions in which research has been done on this topic, and how techniques developed in one area can be applied in domains for which they were not intended to begin with.},
+journal = {ACM Comput. Surv.},
+month = {jul},
+articleno = {15},
+numpages = {58},
+keywords = {outlier detection, Anomaly detection}
+}
+
+@article{capuano2020adaptive,
+  title={Adaptive learning technologies},
+  author={Capuano, Nicola and Caball{\'e}, Santi},
+  journal={Ai Magazine},
+  volume={41},
+  number={2},
+  pages={96--98},
+  year={2020}
+}
+
+@inproceedings{gupta2016literature,
+  title={A literature survey on social engineering attacks: Phishing attack},
+  author={Gupta, Surbhi and Singhal, Abhishek and Kapoor, Akanksha},
+  booktitle={2016 international conference on computing, communication and automation (ICCCA)},
+  pages={537--540},
+  year={2016},
+  organization={IEEE}
+}
+
+@article{hong2012state,
+  title={The state of phishing attacks},
+  author={Hong, Jason},
+  journal={Communications of the ACM},
+  volume={55},
+  number={1},
+  pages={74--81},
+  year={2012},
+  publisher={ACM New York, NY, USA}
+}
+
+@inproceedings{10.1145/3407023.3409179,
+author = {De Bona, Marco and Paci, Federica},
+title = {A Real World Study on Employees' Susceptibility to Phishing Attacks},
+year = {2020},
+isbn = {9781450388337},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3407023.3409179},
+doi = {10.1145/3407023.3409179},
+abstract = {Phishing email attacks have been around for fifteen years but they are still among the top security risks faced by organisations. The most common approach to mitigate these attacks is employees' education and awareness. Employees' awareness on phishing attacks is achieved by embedded training that educate employees when they fall for the attack. However, the effectiveness of embedded training in workplace settings is uncertain given the large number of employees that remain vulnerable to phishing email attacks. Similarly, the role of persuasion techniques in making employees vulnerable to phishing attacks is yet to be investigated in the workplace settings. Therefore, in this paper we investigate which persuasion technique between authority and urgency is more effective in making employees susceptible to phishing, the relation between employees' susceptibility and their demographic data, and the effectiveness of embedded training in reducing employees' susceptibility to phishing attacks. To this end, we conducted a real phishing study with 191 employees of an Italian company. We found that employees were more vulnerable to phishing attacks when urgency principle was exploited. The study also showed no significant effect of employees' demographic data on susceptibility to phishing. Embedded training was perceived as effective by employees but it did not reduce their susceptibility to phishing.},
+booktitle = {Proceedings of the 15th International Conference on Availability, Reliability and Security},
+articleno = {4},
+numpages = {10},
+keywords = {education and training, phishing, social engineering, user study, susceptibility},
+location = {Virtual Event, Ireland},
+series = {ARES '20}
+}
+
+@misc{XSS,
+  title = {LLM causing self-XSS},
+  howpublished = {\url{https://hackstery.com/2023/07/10/llm-causing-self-xss/}},
+  note = {Accessed: 2024-01-04},
+  author = {mik0w}
+}
+
+@book{clarke2009sql,
+  title={SQL injection attacks and defense},
+  author={Clarke-Salt, Justin},
+  year={2009},
+  publisher={Elsevier}
+}
+
+@article{HYDARA2015170,
+title = {Current state of research on cross-site scripting (XSS) – A systematic literature review},
+journal = {Information and Software Technology},
+volume = {58},
+pages = {170-186},
+year = {2015},
+issn = {0950-5849},
+doi = {https://doi.org/10.1016/j.infsof.2014.07.010},
+url = {https://www.sciencedirect.com/science/article/pii/S0950584914001700},
+author = {Isatou Hydara and Abu Bakar Md. Sultan and Hazura Zulzalil and Novia Admodisastro},
+keywords = {Systematic literature review, Cross-site scripting, Security, Web applications},
+abstract = {Context
+Cross-site scripting (XSS) is a security vulnerability that affects web applications. It occurs due to improper or lack of sanitization of user inputs. The security vulnerability caused many problems for users and server applications.
+Objective
+To conduct a systematic literature review on the studies done on XSS vulnerabilities and attacks.
+Method
+We followed the standard guidelines for systematic literature review as documented by Barbara Kitchenham and reviewed a total of 115 studies related to cross-site scripting from various journals and conference proceedings.
+Results
+Research on XSS is still very active with publications across many conference proceedings and journals. Attack prevention and vulnerability detection are the areas focused on by most of the studies. Dynamic analysis techniques form the majority among the solutions proposed by the various studies. The type of XSS addressed the most is reflected XSS.
+Conclusion
+XSS still remains a big problem for web applications, despite the bulk of solutions provided so far. There is no single solution that can effectively mitigate XSS attacks. More research is needed in the area of vulnerability removal from the source code of the applications before deployment.}
+}
+
+@article{XIONG201953,
+title = {Threat modeling – A systematic literature review},
+journal = {Computers \& Security},
+volume = {84},
+pages = {53-69},
+year = {2019},
+issn = {0167-4048},
+doi = {https://doi.org/10.1016/j.cose.2019.03.010},
+url = {https://www.sciencedirect.com/science/article/pii/S0167404818307478},
+author = {Wenjun Xiong and Robert Lagerström},
+keywords = {Threat modeling, Literature review, Cyber security, Risk management, Cyber attacks},
+abstract = {Cyber security is attracting worldwide attention. With attacks being more and more common and often successful, no one is spared today. Threat modeling is proposed as a solution for secure application development and system security evaluations. Its aim is to be more proactive and make it more difficult for attackers to accomplish their malicious intents. However, threat modeling is a domain that lacks common ground. What is threat modeling, and what is the state-of-the-art work in this field? To answer these questions, this article presents a review of threat modeling based on systematic queries in four leading scientific databases. This is the first systematic literature review on threat modeling to the best of our knowledge. 176 articles were assessed, and 54 of them were selected for further analysis. We identified three separate clusters: (1) articles making a contribution to threat modeling, e.g., introducing a new method, (2) articles using an existing threat modeling approach, and (3) introductory articles presenting work related to the threat modeling process. The three clusters were analyzed in terms of a set of criteria, for instance: Is the threat modeling approach graphical or formal? Is it focused on a specific attack type and application? Is the contribution validated empirically or theoretically? We observe from the results that, most threat modeling work remains to be done manually, and there is limited assurance of their validations. The results can be used for researchers and practitioners who want to know the state-of-the-art threat modeling methods, and future research directions are discussed.}
+}
+
+@article{radford2018improving,
+  title={Improving language understanding by generative pre-training},
+  author={Radford, Alec and Narasimhan, Karthik and Salimans, Tim and Sutskever, Ilya and others},
+  year={2018},
+  publisher={OpenAI}
+}
+
+@misc{plugins,
+  title = {Insecure Plugin Design},
+  howpublished = {\url{https://llmtop10.com/llm07/}},
+  note = {Accessed: 2024-01-22},
+  author = {OWASP}
+}
+
+@misc{Overreliance,
+  title = {Overreliance},
+  howpublished = {\url{https://llmtop10.com/llm09/}},
+  note = {Accessed: 2024-01-22},
+  author = {OWASP}
+}
+
+@misc{InsecureOutputHandling,
+  title = {Insecure Output Handling},
+  howpublished = {\url{https://llmtop10.com/llm02/}},
+  note = {Accessed: 2024-01-22},
+  author = {OWASP}
+}
+
+@misc{TrainingPoison,
+  title = {Training Data Poisoning},
+  howpublished = {\url{https://llmtop10.com/llm03/}},
+  note = {Accessed: 2024-01-22},
+  author = {OWASP}
+}
+
+@inproceedings{beattie2002timing,
+  title={Timing the Application of Security Patches for Optimal Uptime.},
+  author={Beattie, Steve and Arnold, Seth and Cowan, Crispin and Wagle, Perry and Wright, Chris and Shostack, Adam},
+  booktitle={LISA},
+  volume={2},
+  pages={233--242},
+  year={2002}
+}
+
+@article{cavusoglu2008security,
+  title={Security patch management: Share the burden or share the damage?},
+  author={Cavusoglu, Hasan and Cavusoglu, Huseyin and Zhang, Jun},
+  journal={Management Science},
+  volume={54},
+  number={4},
+  pages={657--670},
+  year={2008},
+  publisher={INFORMS}
+}
+
+@inproceedings{gupta2015predicting,
+  title={Predicting Cross-Site Scripting (XSS) security vulnerabilities in web applications},
+  author={Gupta, Mukesh Kumar and Govil, Mahesh Chandra and Singh, Girdhari},
+  booktitle={2015 12th international joint conference on computer science and software engineering (JCSSE)},
+  pages={162--167},
+  year={2015},
+  organization={IEEE}
+}
+
+@inproceedings{halfond2006classification,
+  title={A classification of SQL-injection attacks and countermeasures},
+  author={Halfond, William G and Viegas, Jeremy and Orso, Alessandro and others},
+  booktitle={Proceedings of the IEEE international symposium on secure software engineering},
+  volume={1},
+  pages={13--15},
+  year={2006},
+  organization={IEEE}
+}
+
+@article{sadasivan2023can,
+  title={Can ai-generated text be reliably detected?},
+  author={Sadasivan, Vinu Sankar and Kumar, Aounon and Balasubramanian, Sriram and Wang, Wenxiao and Feizi, Soheil},
+  journal={arXiv preprint arXiv:2303.11156},
+  year={2023}
+}
+
+@article{dong2018adaptive,
+  title={An adaptive system for detecting malicious queries in web attacks},
+  author={Dong, Ying and Zhang, Yuqing and Ma, Hua and Wu, Qianru and Liu, Qixu and Wang, Kai and Wang, Wenjie},
+  journal={Science China Information Sciences},
+  volume={61},
+  pages={1--16},
+  year={2018},
+  publisher={Springer}
+}
+
+@misc{Monitoring,
+  title = {Monitoring LLMs},
+  howpublished = {\url{https://towardsdatascience.com/llm-monitoring-and-observability-c28121e75c2f}},
+  note = {Accessed: 2024-01-23},
+  author = {Josh Poduska}
+}
+
+@misc{Monitoring_blog,
+  title = {LLM Monitoring: The Beginner's Guide},
+  howpublished = {\url{https://www.lakera.ai/blog/llm-monitoring}},
+  note = {Accessed: 2024-01-23},
+  author = {Emeka Boris Ama}
+}
+
+@article{yao2023survey,
+  title={A survey on large language model (llm) security and privacy: The good, the bad, and the ugly},
+  author={Yao, Yifan and Duan, Jinhao and Xu, Kaidi and Cai, Yuanfang and Sun, Eric and Zhang, Yue},
+  journal={arXiv preprint arXiv:2312.02003},
+  year={2023}
+}
+
+@article{weidinger2021ethical,
+  title={Ethical and social risks of harm from language models},
+  author={Weidinger, Laura and Mellor, John and Rauh, Maribeth and Griffin, Conor and Uesato, Jonathan and Huang, Po-Sen and Cheng, Myra and Glaese, Mia and Balle, Borja and Kasirzadeh, Atoosa and others},
+  journal={arXiv preprint arXiv:2112.04359},
+  year={2021}
+}
+
+@article{kirchenbauer2023reliability,
+  title={On the Reliability of Watermarks for Large Language Models},
+  author={Kirchenbauer, John and Geiping, Jonas and Wen, Yuxin and Shu, Manli and Saifullah, Khalid and Kong, Kezhi and Fernando, Kasun and Saha, Aniruddha and Goldblum, Micah and Goldstein, Tom},
+  journal={arXiv preprint arXiv:2306.04634},
+  year={2023}
+}
+
+@article{gehman2020realtoxicityprompts,
+  title={Realtoxicityprompts: Evaluating neural toxic degeneration in language models},
+  author={Gehman, Samuel and Gururangan, Suchin and Sap, Maarten and Choi, Yejin and Smith, Noah A},
+  journal={arXiv preprint arXiv:2009.11462},
+  year={2020}
+}
+
+@article{penedo2023refinedweb,
+  title={The RefinedWeb dataset for Falcon LLM: outperforming curated corpora with web data, and web data only},
+  author={Penedo, Guilherme and Malartic, Quentin and Hesslow, Daniel and Cojocaru, Ruxandra and Cappelli, Alessandro and Alobeidli, Hamza and Pannier, Baptiste and Almazrouei, Ebtesam and Launay, Julien},
+  journal={arXiv preprint arXiv:2306.01116},
+  year={2023}
+}
+
+@inproceedings{wang2019improving,
+  title={Improving neural language modeling via adversarial training},
+  author={Wang, Dilin and Gong, Chengyue and Liu, Qiang},
+  booktitle={International Conference on Machine Learning},
+  pages={6555--6565},
+  year={2019},
+  organization={PMLR}
+}
+
+@article{wang2023decodingtrust,
+  title={DecodingTrust: A Comprehensive Assessment of Trustworthiness in GPT Models},
+  author={Wang, Boxin and Chen, Weixin and Pei, Hengzhi and Xie, Chulin and Kang, Mintong and Zhang, Chenhui and Xu, Chejian and Xiong, Zidi and Dutta, Ritik and Schaeffer, Rylan and others},
+  journal={arXiv preprint arXiv:2306.11698},
+  year={2023}
+}

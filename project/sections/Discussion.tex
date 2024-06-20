@@ -1,0 +1,45 @@
+\section{\textit{Discussion and Outlook}}
+In the following section, we discuss the results of this paper to give a deeper insight into decision-making and also to highlight the limitations of this work.
+
+We start by discussing the advantages and limitations of the proposed taxonomy. 
+Then, we go over the defense mechanisms and explain, why they have to be treated with care.
+Finally, we take a look at the potential of future research and where it is required to not fall behind the developments of the attackers.
+
+\subsection{\textit{Taxonomy}}
+\label{subsec:tax}
+Our comprehensive taxonomy of PI attacks against LLMs serves as a fundamental framework for understanding potential threats.
+It allows a systematic approach to the categorization of a wide range of attack vectors, modes of operation, and attack goals.
+By breaking down these three dimensions into subcategories, it aids researchers and practitioners in identifying specific vulnerabilities and tailoring defenses accordingly. 
+However, this taxonomy might be too rigid. As cyber security in general, but also specifically PI attacks, are very dynamic, new types of attacks that do not fit neatly into existing categories may emerge. 
+Therefore, this could limit the taxonomy's applicability over time and may necessitate continual updates, staying in line with future developments. 
+Additionally, the focus on current known and \textit{researched} attack patterns might overlook very new, currently already emerging threats that have yet to be identified or widely recognized.
+
+Furthermore, the success rate of attacks is very dependent on the neural network architecture of the LLM \cite{perez2022ignore, liu2023prompt, 10.1145/3605764.3623985} and thus, the applicability of them is very volatile. Even though this does not affect the categorization itself, it is something to look out for when evaluating the security of a LLM. 
+
+\subsection{\textit{Defense Mechanisms}}
+We explore several defense mechanisms to provide multiple strategies to safeguard LLMs against PI attacks, following our taxonomy. 
+Collectively, these defense strategies form a robust and integrated approach to LLM security. Each mechanism addresses specific vulnerabilities, offering a tailored defense against different types of attacks. 
+This holistic approach is crucial for enhancing the overall resilience of LLMs.
+Nevertheless, the primary limitation of these defense mechanisms is their potential impact on the functionality and performance of the LLM. For instance, data pre-processing and role-based access control could lead to restrictions that impede the model's flexibility and user accessibility.
+Monitoring user interactions raises privacy concerns and may lead to ethical dilemmas about surveillance and data usage. The separation of data from instructions, while reducing the risk of certain vulnerabilities, could also impact the LLM's ability to process complex queries effectively. 
+
+In \Cref{subsec:tax} we mention the dependability of attacks on the network architecture.
+This factor also comes into play when implementing defense mechanisms, as this does not only count for different architectures, but also different versions of the same LLM. A prominent example of this is OpenAI's GPT-3.5 and GPT-4~\cite{wang2023decodingtrust}. While GPT-4 is more trustworthy in terms of protecting privacy and bias and generally more robust against attacks, it is also more prone to jailbreak attacks than GPT-3.5~\cite{wang2023decodingtrust}. This heavily implies the need for consistent awareness of the LLM's robustness during development.
+
+In this paper, we do not mention the human as a means of defense. We do this, because, strictly speaking, it is not a defense mechanism that applies to LLMs. 
+However, the incorporation of human-in-the-loop systems can provide an additional layer of security, where suspicious activities are flagged for human review to extend monitoring. 
+Even though LLMs are really good at understanding and imitating human texts, it is still difficult to them to predict whether a text was human-written or not. In these cases, human expertise (or maybe even a common sense is sufficient) can help improve the reaction of a LLM against an ongoing attack.
+
+At this point we would also like to point out the need to raise user awareness. This falls out of scope for our paper, but it still an important aspect. Not necessarily for the security of the LLM, but rather for the security of the user themselves. While using LLMs is very helpful to many, it is important to highlight the (hidden) dangers that come with it.
+
+\subsection{\textit{Future Research}}
+Considering the evolving nature of cyber threats against LLMs, future research is vital for advancing the field. 
+However, a significant challenge is the pace at which new threats emerge and evolve.
+Rapid advancements can quickly render the current taxonomy and defense mechanisms useless, highlighting the need for fast, up-to-date, research.
+Usually, the research cycle of a paper is long. From the beginning of a project until the publication, most of the time, \textit{at least} a year passes. For the security of LLMs, this is crucial. Systems used every day by benign users cannot wait a year to react to threats. They have to react as soon as possible to ensure the user's safety. Therefore, from a practical point of view, it is almost impossible to rely on research only.
+
+As of right now, there are many more attacks only to be found and described on blog posts and not in scientific research papers. 
+While these attacks are valid and very important to the security community, it is hard to consider them for this taxonomy as, without a proper scientific backup, their contribution is only partially relevant. 
+Even though they are publicly available, they are really hard to find. Consequently, due to their unknown nature, these attacks might even be more dangerous as they have to be mitigated by practice only without scientific insight.
+
+Additionally, balancing security with ethical considerations and user privacy is a complex issue that has yet to be tackled, especially in terms of defense mechanisms. Of course, this applies to the whole field of cyber security, but it is even more important in the context of systems users interact with, without suspecting that their data is collected or monitored.

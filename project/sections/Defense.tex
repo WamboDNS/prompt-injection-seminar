@@ -1,0 +1,75 @@
+\section{\textit{Defense Mechanisms}}
+Maintaining the integrity, reliability and safety of LLMs is crucial for the user. 
+Since LLMs are becoming more relevant in our everyday lives every single day, they have to be protected from malicious inputs and exploitation. 
+
+In the following, we will cover possible approaches to make LLMs more robust and safe against prompt injection attacks following the categories of our taxonomy. 
+We start with data processing. 
+After that, we touch role-based access control and monitoring mechanisms for user-model interactions. 
+Finally, we discuss why the separation of instructions and data is crucial for the security of a LLM and give a summary of proposed defense mechanisms.
+
+%\paragraph{Patching}
+%First and foremost, as always in cyber security, regular patching is the key to a secure system~\cite{10.1145/3133956.3134072}. 
+%LLMs have to be updated regularly to defend against new threats, while also not forgetting about old ones. 
+%New vulnerabilities should be patched as quickly as possible. 
+%However, the patching process should not only be reactive to attacks seen but also be in line with current research to prevent attacks before they happen.
+%Even though this process may seem obvious at first glance, it is not. 
+%A fast reaction to an attack becomes challenging once a model gains popularity~\cite{beattie2002timing, cavusoglu2008security}. 
+%The more popular it is, the more attention it receives, which then again ends in more attacks. 
+%This highlights the need for a taxonomy to help analyze attacks on a larger scale.
+%Furthermore, patching is a very broad action to defend against attacks. 
+%With proper patching, almost all subcategories mentioned in this paper can be mitigated, at least to some degree. 
+
+\paragraph{Data Processing}
+Roughly speaking, a LLM is confronted with three types of data: input data, data used for training and inference, and output data. 
+While the input data is user-given and the output data is the response of the LLM, the data used for training and inference is broad.
+We already know that every one of these three parts is vulnerable to prompt injections. Therefore, each of these parts has to be treated carefully.
+
+In~\Cref{taxonomy}, we introduce several attacks relying on the formatting of prompts~\cite{10.1145/3605764.3623985, perez2022ignore, liu2023prompt}. These attacks confuse the LLM by leveraging delimiter characters or unusual breaking of the input. Input sanitization is a crucial step in handling such malicious prompts. Sanitization is achieved by stripping the input, not allowing certain (escape) characters or encoding them, and avoiding the execution of unwanted commands. Additionally, input validation ensures correct formatting and thus reduces the chances of undetected malicious prompts further~\cite{10.1145/2351676.2351733}. Attacks based on special (escape) characters such as SQL injections, direct PIs using escape characters or XSS attacks are easily avoidable this way~\cite{halfond2006classification, gupta2015predicting}. 
+One special thing to look out for with this approach is the structure of natural language. 
+There are prompts exploiting specific sequences of characters a human would not use~\cite{perez2022ignore, liu2023prompt} and this kind of attack can be mitigated if only input prompts following human-written text patterns are allowed.
+However, such preprocessing is not always only the cleaning of input data, but can also be retokenization and paraphrasing~\cite{kirchenbauer2023reliability}. That way, the exposure to jailbreak attacks can be reduced.
+
+Since the LLM's performance relies heavily on training data~\cite{weidinger2021ethical}, it is crucial to process it. Working with raw data fetched from the internet is dangerous~\cite{gehman2020realtoxicityprompts} and therefore it should be processed in several steps to make sure that there is no bias, hate speech, misinformation et cetera present~\cite{penedo2023refinedweb}.
+
+Lastly, the LLM gives a response. Oftentimes, the response of a LLM is the key indicator of whether an attack was successful. Whether it is a generated XSS attack~\cite{XSS}, the usage of forbidden words~\cite{wei2023jailbroken}, or any other hint towards unintended behavior, it is possible to restrict this. Before outputting a response to a user, it can be analyzed. Using machine learning algorithms, this possibly harmful output can be categorized~\cite{wang2019improving} and, if noticed, simply not printed. However, this only works for attacks relying on the output. In the case of SQL injections, this step alone will of course not work as the output is only the result of a database query. 
+
+\paragraph{Role-Based Access Control}
+A rather specific approach to defend against prompt injections is role-based access control (RBAC)~\cite{SANDHU1998237}. 
+Known from other parts of cyber security, this concept assigns each user a role or a specific group.
+Each role is associated with certain rights controlling which data a user of this role has access to.
+
+This approach to user management can be applied directly to LLMs~\cite{zafar2023building}.
+Managing which user can access which parts of data, which functionalities, and which can execute specific prompts mitigates the risk of unauthorized access to sensitive data.
+Especially SQL injection attacks against databases~\cite{pedro2023prompt} or the leakage of sensitive information of other users could be reduced significantly if treated with the correct access rights. 
+If assigned correctly, the roles will shift the responsibility to provide the correct access from the LLM to the configuration of the roles.
+Therefore, it is not up to the LLM to decide which user can access what resource but to appropriate role assignment. 
+However, this of course does not prevent attacks targeting individual users working with phishing or stolen credentials.
+
+\paragraph{Monitoring}
+Real-time monitoring the interactions with a user is something many users may not expect, or even dislike, but for the defense against malicious usage of a LLM, this step can be powerful~\cite{Monitoring}.
+Many attacks rely on prompt engineering, the iterative process of crafting a prompt until an attack is successful.
+Repeatedly injected prompts are analyzed and adapted by the adversary to achieve their goal.
+With monitoring, this process can be stopped early~\cite{Monitoring}. 
+Unusual behavior is noticed and interrupted immediately, preventing further damage. 
+Direct PIs, jailbreak attacks or SQL injections and many more patterns relying on the exploration of boundaries can be prevented using monitoring~\cite{Monitoring_blog}.
+Furthermore, in addition to monitoring the interaction with the user, the output and responses of a LLM can be monitored. 
+This mechanism prohibits the LLM from attacking the user via self-crafted XSS attacks or, as an example, the distribution of malicious e-mails. Generally, this defends against the crafting of prompts and the MOP of leveraging the LLM.
+
+\paragraph{Separation of Data and Instructions}
+Due to the recent upside of integrated LLMs, one of the most prominent vulnerabilities of LLMs is an insufficient separation of instructions and data~\cite{10.1145/3605764.3623985}. 
+The lack of separation allows to inject instructions in plain text or hidden in data.
+Without defense mechanisms, these malicious instructions go unnoticed by the LLM and instead of treating them as it should, like data, the LLM instead evaluates the instructions~\cite{10.1145/3605764.3623985}.
+A seemingly quick fix for this is simple: Data retrieved stays data and should never be evaluated as instructions.
+
+Even though implementing this mechanism seems straightforward, it does not solve the issue completely. 
+It might work for data that is clearly labeled as such, but as soon as it comes to user-given prompts, the distinction between data and instruction blurs~\cite{10.1145/3605764.3623985}. 
+The same goes for external connections of the LLM to third-party applications. 
+When in doubt, such a strict separation could negatively impact the performance of the LLM.
+Therefore, this topic is to be treated with care.
+
+These defense mechanisms collectively enhance LLM security against prompt injection attacks.
+Data processing mitigates risks associated with data manipulation.
+Role-based access control prevents unauthorized data access and information leakage.
+Monitoring of user interactions curbs ongoing and iterative attacks and suspicious activities.
+The separation of data from instructions addresses vulnerabilities from embedded malicious commands.
+Combined, these mechanisms form an integrated defense baseline, addressing distinct vulnerabilities to strengthen LLM resilience against diverse PI attacks.
