@@ -5,6 +5,8 @@ I wrote this SOK seminar paper as a part of the '[Security of Machine Learning](
 2) Mode of Operation
 3) Goal of the Attack
 
+You can find the PDF under [print.pdf](print.pdf)
+
 ## Abstract
 Large Language Models (LLMs) have gained huge popularity in recent years. 
 Being widely available to the public, these Natural Language Processing models can answer human-written input prompts with output prompts hard to distinguish from human-written answers.
